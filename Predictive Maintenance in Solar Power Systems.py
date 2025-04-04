@@ -88,24 +88,23 @@ plt.tight_layout()
 plt.show()
 
 # Q1 Answer
-print("1. What features are most important for predicting equipment failures?")
-print("→ Voltage and Current are the most important features.")
+print("1. Most important features for predicting failures:")
+print("→ Voltage and Current are the key predictors.")
 
 # Q2 Answer
-print("\n2. Develop a machine learning model to predict inverter failure.")
-print("→ A Random Forest Classifier is used to predict inverter failures with good accuracy.")
+print("\n2. Model used to predict inverter failure:")
+print("→ Random Forest Classifier achieved good performance.")
 print(f"→ Accuracy: {accuracy:.2f}, Precision: {precision:.2f}, Recall: {recall:.2f}, F1 Score: {f1:.2f}")
 
 # Q3 Answer
-print("\n3. How would you improve the model's accuracy?")
-print("→ Use more features, apply hyperparameter tuning, and try advanced models like XGBoost.")
+print("\n3. Ways to improve model accuracy:")
+print("→ Add more features, tune hyperparameters, or use XGBoost.")
 
 # Q4 Answer
-print("\n4. What actions should be taken if a failure is predicted?")
-print("→ Alert maintenance, schedule inspection, and switch to backup systems.")
+print("\n4. Actions to take if failure is predicted:")
+print("→ Notify maintenance, check system, activate backup.")
 
 # Q5 Answer
-print("\n5. How can predictive maintenance contribute to sustainability and reduce waste?")
-print("→ It prevents unnecessary replacements, reduces downtime, and extends equipment life.")
-
+print("\n5. How predictive maintenance helps sustainability:")
+print("→ Reduces waste, extends equipment life, saves resources.")
 
