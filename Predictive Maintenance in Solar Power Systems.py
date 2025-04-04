@@ -18,7 +18,7 @@ df = pd.read_csv(file_path)
 df = df.drop(columns=["Timestamp"], errors='ignore')
 
 # Define features and target
-X = df[["Temperature (�C)", "Voltage (V)", "Current (A)"]]
+X = df[["Temperature (°C)", "Voltage (V)", "Current (A)"]]
 y = df["Failure"]
 
 # Split data
@@ -54,7 +54,7 @@ df_minority_oversampled = resample(
 df_balanced = pd.concat([df_majority, df_minority_oversampled])
 
 # Split balanced dataset
-X_balanced = df_balanced[["Temperature (�C)", "Voltage (V)", "Current (A)"]]
+X_balanced = df_balanced[["Temperature (°C)", "Voltage (V)", "Current (A)"]]
 y_balanced = df_balanced["Failure"]
 X_train_bal, X_test_bal, y_train_bal, y_test_bal = train_test_split(
     X_balanced, y_balanced, test_size=0.2, random_state=42
@@ -87,5 +87,25 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 
+# Q1 Answer
+print("1. What features are most important for predicting equipment failures?")
+print("→ Voltage and Current are the most important features.")
+
+# Q2 Answer
+print("\n2. Develop a machine learning model to predict inverter failure.")
+print("→ A Random Forest Classifier is used to predict inverter failures with good accuracy.")
+print(f"→ Accuracy: {accuracy:.2f}, Precision: {precision:.2f}, Recall: {recall:.2f}, F1 Score: {f1:.2f}")
+
+# Q3 Answer
+print("\n3. How would you improve the model's accuracy?")
+print("→ Use more features, apply hyperparameter tuning, and try advanced models like XGBoost.")
+
+# Q4 Answer
+print("\n4. What actions should be taken if a failure is predicted?")
+print("→ Alert maintenance, schedule inspection, and switch to backup systems.")
+
+# Q5 Answer
+print("\n5. How can predictive maintenance contribute to sustainability and reduce waste?")
+print("→ It prevents unnecessary replacements, reduces downtime, and extends equipment life.")
 
 
